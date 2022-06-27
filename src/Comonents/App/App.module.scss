@@ -1,0 +1,8 @@
+@import "src/styles/mixins";
+
+.container {
+  max-width: 100%;
+  min-height: 100vh;
+  @include flex(center, center, column);
+  margin: 0 auto;
+}

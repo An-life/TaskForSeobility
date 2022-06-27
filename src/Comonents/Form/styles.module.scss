@@ -1,0 +1,159 @@
+@import 'src/styles/mixins';
+@import 'src/styles/variables';
+
+.container {
+  border: solid 2px $color-turquoise;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  min-height: 100%;
+  @include flex(flex-start, flex-start, column);
+  margin: 0 auto;
+  background-color: $color-turquoise-light;
+
+  @media (max-width: 400px) {
+    width: 250px;
+  }
+
+  .title {
+    padding: 10px 0;
+    color: $color-turquoise;
+    font-size: 20px;
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+
+    @media (max-width: 400px) {
+      font-size: 15px;
+    }
+  }
+
+  .textarea {
+    padding: 5px;
+    width: 290px;
+    height: 100px;
+    border: solid 2px $color-turquoise;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    color: $color-turquoise;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    outline: none;
+
+    &:focus {
+      border: solid 2px $color-turquoise-dark;
+    }
+
+    &::placeholder {
+      color: $color-turquoise;
+    }
+
+    @media (max-width: 400px) {
+      width: 240px;
+    }
+  }
+
+  .notValidTextarea {
+    padding: 5px;
+    min-width: 300px;
+    min-height: 100px;
+    border: solid 2px $color-rad;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    outline: none;
+    color: $color-turquoise;
+
+    @media (max-width: 400px) {
+      width: 240px;
+    }
+
+    &:focus {
+      border: solid 2px $color-rad;
+    }
+  }
+
+  .button {
+    width: 300px;
+    background-color: $color-turquoise-light;
+    border: solid 2px $color-turquoise;
+    padding: 10px;
+    color: $color-turquoise;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+
+    @media (max-width: 400px) {
+      width: 255px;
+    }
+
+    &:hover {
+      background-color: $color-turquoise;
+      color: $color-turquoise-light;
+      cursor: pointer;
+    }
+
+    &:disabled {
+      background-color: $color-gray;
+      color: $color-turquoise-light;
+      cursor: auto;
+    }
+  }
+
+  .validMessage {
+    color: $color-rad;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    max-width: 310px;
+
+    @media (max-width: 400px) {
+      width: 250px;
+    }
+  }
+
+  .input {
+    padding: 10px;
+    width: 280px;
+    border: solid 2px $color-turquoise;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    color: $color-turquoise;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    outline: none;
+
+    @media (max-width: 400px) {
+      width: 230px;
+    }
+
+    &:focus {
+      border: solid 2px $color-turquoise-dark;
+    }
+
+    &::placeholder {
+      color: $color-turquoise;
+    }
+  }
+
+  .notValidInput {
+    padding: 10px;
+    width: 280px;
+    border: solid 2px $color-rad;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    color: $color-turquoise;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    outline: none;
+
+    &:focus {
+      border: solid 2px $color-rad;
+    }
+  }
+
+  .responseText {
+    color: $color-turquoise;
+    font-size: 20px;
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    width: 280px;
+  }
+}
